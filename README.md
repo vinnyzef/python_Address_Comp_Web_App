@@ -21,4 +21,4 @@ This is a personal project developed to assist my mother in her position at Cint
 * Django: A high-level Python web framework used for building the web application, handling user input, and rendering results.
 * HTML and CSS: Used for designing and styling the user interface.
 
-This project aims to provide a more reliable and accurate solution to my mother's specific needs at Cintas, enabling her to identify affected companies more effectively and improve overall productivity. The web application simplifies the process of uploading and comparing CSV files, making it an easy-to-use tool that can be accessed whenever needed.
+**This project aims to provide a more reliable and accurate solution to my mother's specific needs at Cintas, enabling her to identify affected companies more effectively and improve overall productivity. The web application simplifies the process of uploading and comparing CSV files, making it an easy-to-use tool that can be accessed whenever needed.**
