@@ -73,10 +73,9 @@ class CompareForms:
 
             if not matching_rows.empty:
                 name1 = matching_rows.iloc[0]['Name 1']
-                if name1 not in result['Name 1'].values:
-                    matched_data = pd.DataFrame({'Name 1': [name1], 'UCID': [row['UCID']]})
-                    result = pd.concat([result, matched_data], ignore_index=True)
-
+                # if name1 not in result['Name 1'].values:
+                matched_data = pd.DataFrame({'Name 1': [name1], 'UCID': [row['UCID']]})
+                result = pd.concat([result, matched_data], ignore_index=True)
         # Print the result
         return result.to_string(index=False)
 
