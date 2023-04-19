@@ -61,7 +61,8 @@ class CompareForms:
         table1 = pd.read_csv(self.csv1)
         table2 = pd.read_csv(self.csv2)
         # Preprocess addresses
-        table1['Address 1'] = table1['Address 1'].apply(self.preprocess_address)
+        table1['Address 1'] = table1['Address 1'].apply(
+            self.preprocess_address)
         table2['Address'] = table2['Address'].apply(self.preprocess_address)
 
         # Create an empty result DataFrame
@@ -74,7 +75,8 @@ class CompareForms:
             if not matching_rows.empty:
                 name1 = matching_rows.iloc[0]['Name 1']
                 # if name1 not in result['Name 1'].values:
-                matched_data = pd.DataFrame({'Name 1': [name1], 'UCID': [row['UCID']]})
+                matched_data = pd.DataFrame(
+                    {'Name 1': [name1], 'UCID': [row['UCID']]})
                 result = pd.concat([result, matched_data], ignore_index=True)
         # Print the result
         return result.to_string(index=False)
