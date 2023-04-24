@@ -70,7 +70,9 @@ class CompareForms:
 
         for index, row in table2.iterrows():
             # Check if the address exists anywhere in the "Address 1" column of file 1
+            # if row['UCID'] == "fas"
             matching_rows = table1[table1['Address 1'] == row['Address']]
+            # want to check on the fact that a UCID should be fas not "corp" or anytning of that nature
 
             if not matching_rows.empty:
                 name1 = matching_rows.iloc[0]['Name 1']

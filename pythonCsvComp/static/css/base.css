@@ -1,3 +1,7 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow&display=swap');
+
+
 .content_wrapper{
     margin: 1rem;
     position: relative;
@@ -19,4 +23,5 @@
 }
 body{
     background-color: black;
+    font-family: 'Archivo Narrow', sans-serif;;
 }
