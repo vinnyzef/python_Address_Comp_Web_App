@@ -70,18 +70,18 @@ class CompareForms:
 
         for index, row in table2.iterrows():
             # Check if the address exists anywhere in the "Address 1" column of file 1
-            # if row['UCID'] == "fas"
             matching_rows = table1[table1['Address 1'] == row['Address']]
-            # want to check on the fact that a UCID should be fas not "corp" or anytning of that nature
 
             if not matching_rows.empty:
                 name1 = matching_rows.iloc[0]['Name 1']
-                # if name1 not in result['Name 1'].values:
-                matched_data = pd.DataFrame(
-                    {'Name 1': [name1], 'UCID': [row['UCID']]})
-                result = pd.concat([result, matched_data], ignore_index=True)
+                if name1 not in result['Name 1'].values:
+                    matched_data = pd.DataFrame(
+                        {'Name 1': [name1], 'UCID': [row['UCID']]})
+                    result = pd.concat(
+                        [result, matched_data], ignore_index=True)
         # Print the result
         return result.to_string(index=False)
+
 
 # # Example usage:
 # compare = CompareForms('path/to/csv1.csv', 'path/to/csv2.csv')
